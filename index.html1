@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TARIGHAT NEXUS | آینده هوشمند</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d18;color:#f5f3ed;font-family:Tahoma,Arial,sans-serif;line-height:2}
+.wrap{width:92%;max-width:1000px;margin:auto}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid #29364c}
+.brand,h2,h3{color:#dfbd76}
+.brand{font-weight:bold;font-size:20px}
+button,.btn{display:inline-block;border:1px solid #c5a45e;border-radius:12px;padding:10px 18px;background:#dfbd76;color:#17130b;font-weight:bold;text-decoration:none;cursor:pointer}
+.hero{text-align:center;padding:75px 0}
+.hero h1{font-size:clamp(34px,7vw,62px);line-height:1.5}
+.hero p,.card p,.sub{color:#aab4c5}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px;margin:25px 0 55px}
+.card,.demo{background:#121d30;border:1px solid #29364c;border-radius:17px;padding:20px}
+textarea{width:100%;min-height:100px;background:#091222;color:white;border:1px solid #34445d;border-radius:10px;padding:12px;font:inherit}
+.answer{margin-top:12px;color:#dfbd76}
+footer{text-align:center;border-top:1px solid #29364c;padding:22px;color:#aab4c5}
+</style>
+</head>
+<body>
+<header class="wrap">
+<div class="brand">✦ TARIGHAT NEXUS</div>
+<button id="lang">EN</button>
+</header>
+<main class="wrap">
+<section class="hero">
+<div style="color:#dfbd76">دروازه‌ای به دنیای هوش مصنوعی</div>
+<h1>هوشمندتر فکر کن،<br>بزرگ‌تر بساز.</h1>
+<p>TARIGHAT NEXUS بستری برای دسترسی ساده‌تر به ابزارها و خدمات هوش مصنوعی است؛ از ایده‌پردازی تا ساخت راهکارهای دیجیتال.</p>
+<a class="btn" href="#services">شروع کاوش</a>
+<a class="btn" href="#assistant" style="background:transparent;color:white">آزمایش دستیار</a>
+</section>
+<section id="services">
+<h2>خدمات و قابلیت‌ها</h2>
+<p class="sub">ساختار اولیه برای توسعه یک پلتفرم هوشمند</p>
+<div class="grid">
+<div class="card"><h3>✧ دستیار هوشمند</h3><p>کمک در انجام کارهای روزمره؛ اتصال به مدل‌های واقعی در مرحله بعد اضافه می‌شود.</p></div>
+<div class="card"><h3>⌘ ابزارهای AI</h3><p>فضایی برای معرفی و یکپارچه‌سازی ابزارهای متنوع هوش مصنوعی.</p></div>
+<div class="card"><h3>◎ چندزبانه</h3><p>آماده برای پشتیبانی از فارسی و انگلیسی و زبان‌های بیشتر.</p></div>
+<div class="card"><h3>⬡ رشدپذیر و امن</h3><p>پایه‌ای برای افزودن حساب کاربری، پایگاه داده و لایه‌های امنیتی.</p></div>
+</div>
+</section>
+<section id="assistant">
+<h2>دستیار آزمایشی</h2>
+<p class="sub">این بخش فعلاً نمایشی است و به مدل هوش مصنوعی متصل نیست.</p>
+<div class="demo">
+<label for="q">سؤالت را بنویس:</label>
+<textarea id="q" placeholder="مثلاً برای کسب‌وکارم یک ایده پیشنهاد بده..."></textarea>
+<p><button id="send">ارسال آزمایشی</button></p>
+<div id="answer" class="answer">برای پاسخ هوشمند واقعی باید سرویس AI در مرحله بعد به‌صورت امن متصل شود.</div>
+</div>
+</section>
+</main>
+<footer>© 2026 TARIGHAT NEXUS — نسخه اولیه</footer>
+<script>
+let en=false;
+document.getElementById('send').onclick=()=>{
+document.getElementById('answer').textContent='این نسخه فعلاً نمایشی است؛ موتور هوش مصنوعی در مرحله بعد به‌صورت امن متصل خواهد شد.';
+};
+document.getElementById('lang').onclick=()=>{
+en=!en;
+document.documentElement.lang=en?'en':'fa';
+document.documentElement.dir=en?'ltr':'rtl';
+document.getElementById('lang').textContent=en?'فا':'EN';
+document.querySelector('.hero').innerHTML=en?
+'<div style="color:#dfbd76">A gateway to artificial intelligence</div><h1>Think smarter.<br>Build bigger.</h1><p>TARIGHAT NEXUS is a platform for exploring AI tools and services.</p><a class="btn" href="#services">Explore</a> <a class="btn" href="#assistant">Try assistant</a>':
+'<div style="color:#dfbd76">دروازه‌ای به دنیای هوش مصنوعی</div><h1>هوشمندتر فکر کن،<br>بزرگ‌تر بساز.</h1><p>TARIGHAT NEXUS بستری برای دسترسی ساده‌تر به ابزارها و خدمات هوش مصنوعی است؛ از ایده‌پردازی تا ساخت راهکارهای دیجیتال.</p><a class="btn" href="#services">شروع کاوش</a> <a class="btn" href="#assistant">آزمایش دستیار</a>';
+};
+</script>
+</body>
+</html>
